@@ -1,4 +1,5 @@
 import os
+from time import sleep
 try:
     import click
 except:
@@ -17,5 +18,9 @@ elif str(servers) == "<Response [200]>":
     print("Servers contacted.")
 def kill():
     exit()
+def schedule(secs, run):
+    sleep(secs)
+    eval(run)
+
 while True:
     eval(input(">>> "))
